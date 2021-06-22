@@ -1,1 +1,323 @@
+<html>
+  <title>
+    MTO
+  </title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>MTO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 仅demo所用，可忽略 START -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- 仅demo所用，可忽略 END -->
+    <style type="text/css">
+    body {
+        padding-top: 20px;
+    }
 
+    #live2d-widget {
+        transform-origin: 100% 100% 0;
+    }
+
+    .selectClick {
+        padding: 2px 4px;
+    }
+
+    .glyphicon {
+        position: fixed !important;
+        top: 10px;
+        right: 10px;
+        border: 0;
+        z-index: 1;
+        font-size: 30px;
+        color: #000;
+    }
+
+    .octicon-mark-github {
+        right: 50px;
+    }
+    </style>
+    
+    
+    <link href="assets/Icon/icon3.ico" rel="SHORTCUT ICON">
+      <div class="text"; align="center">
+        <font color="#000000"><h1></br>欢迎来到枫叶三体组织!</h1></font>
+        <font color="#39c5bb"><h1>Welcome to the MTO!</h1></font>
+      </div>
+      
+      <div class="text2"; align="center">
+        <font color="#000000"><h1></br>我们抵制枫叶，并开展反帝反枫建民主革命运动。这将是一场推翻枫朝专制帝制、建立共和政体的全校性革命。</h1></font>
+        <font color="#39c5bb"><h1>We are Anti-Maple Leaf, but we are not Anti-Social. </br></font>
+      </div>
+      
+      <div class="text2"; align="center">
+        <font color="#000000"><h1></br>“我们不知道外星文明是什么样子，但知道枫叶。”我们的宗旨是借助三体世界的力量彻底铲除腐败的枫叶帝国主义（帝国主义是资本主义的最高阶段）和以其为代表的轴心国势力。我们的口号是：消灭枫叶暴政，世界属于三体!</h1></font>
+        <font color="#39c5bb"><h1>"We don't know what alien civilization looks like, but we do know maple leaf." Our aim is to eradicate maple leaf Imperialism (imperialism is the highest stage of capitalism) with the help of the power of the three body world. Our slogan is: Eliminate the tyranny of maple leaf, the world belongs to three bodies!</font>
+      </div>
+  </head>
+  <body>
+      <script>
+        (function () {
+            var a_idx = 0;
+            window.onclick = function (event) {
+                var a = new Array("❤prosperity❤", "❤democracy❤", "❤civility❤", "❤harmony❤", "❤freedom❤", "❤equality❤", "❤justice❤", "❤rule of law❤", "❤patriotism❤",
+            "❤dedication❤", "❤integrity❤", "❤friendship❤");
+
+                var heart = document.createElement("b"); //创建b元素
+                heart.onselectstart = new Function('event.returnValue=false'); //防止拖动
+
+                document.body.appendChild(heart).innerHTML = a[a_idx]; //将b元素添加到页面上
+                a_idx = (a_idx + 1) % a.length;
+                heart.style.cssText = "position: fixed;left:-100%;"; //给p元素设置样式
+
+                var f = 16, // 字体大小
+                    x = event.clientX - f / 2, // 横坐标
+                    y = event.clientY - f, // 纵坐标
+                    c = randomColor(), // 随机颜色
+                    a = 1, // 透明度
+                    s = 1.2; // 放大缩小
+
+                var timer = setInterval(function () { //添加定时器
+                    if (a <= 0) {
+                        document.body.removeChild(heart);
+                        clearInterval(timer);
+                    } else {
+                        heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                            c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                            s + ");";
+
+                        y--;
+                        a -= 0.016;
+                        s += 0.002;
+                    }
+                }, 15)
+
+            }
+            // 随机颜色
+            function randomColor() {
+
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+                .random() * 255)) + ")";
+            }
+        }());
+    </script>
+      
+    <body background="assets/Image/img_0.png"
+    style=" background-repeat:no-repeat ;
+    background-size:100% 100%;
+    background-attachment: fixed;"
+    >
+
+    <audio id="music" src="assets/Sound/snd-.mp3" loop autoplay></audio>
+
+    <script>
+      window.onload = function(){ 
+          var audio = document.getElementById('music');
+              audio.pause();//打开页面时无音乐
+      }
+      function play() {
+          var audio = document.getElementById('music');
+          if (audio.paused) {
+              audio.play();
+              document.getElementById('musicImg').src="images/play.png";
+          }else{
+              audio.pause();
+              audio.currentTime = 0;//音乐从头播放
+              document.getElementById('musicImg').src="images/stop.png";
+          }
+      }
+      </script>
+
+    <img img style="position: fixed;right: 0;top:300;bottom:0;" src="assets/Image/2.png" height="360" width="160" onClick="play()" alt="user"> 
+
+
+    <div align="left">
+      <font color="#000000"><h1></br>请注意，本网站内容涉及大量三次元梗（指三体）以及二次元/宗教梗（车万、术力口、创价、银梦等），请谨慎观看，勿当真。目前网页仍处于测试开发状态，不代表最终结果。本次试运营时长为30天，从2021年6月16日持续到2021年7月16日。本网站的版权归创建者所有，请勿转载。如有任何疑问，欢迎与创建者交流。（之后会更名为“兔角同盟”。）</br>
+      The website is now in development, so the quality cannot be guaranteed. This website will be set up on the internet for 30 days as a practice, from 2021/06/16 to 2021/07/16. This website is copyright. Please do not use this website for any commercial or political reasons. </h1></font>
+    </div>
+
+    <div align="center">
+      <a href='contents-c.html'><img src="assets/Image/img_0.jpg" height="400" width="400"></a>
+    </div>
+
+    <div class="text3"; align="center">
+      <font color="#000000"><h1>铃仙·优昙华院·稻叶,</br>Reisen·Udongein·Inaba,</font>
+    </div>
+    <div align="left">
+      <font color="#000000"><h2>  是该网站的创建者，常用代号是1379，Yak(雅克)和Backfire(逆火)，是枫叶615事件的经历者、幸存者，并于2021年6月15日成立枫（兔）叶（角）三（同）体（盟）组织，简称MTO（RHA，Rabbit Horn Alliance），而后担任MTO的精神领袖，主要领导拯救派。</br>现在居住在幻想乡的永远亭中，兼职当自机和卖药（雾）。同时也是三体厨、车万厨、创价厨、术力口厨等，个人其实并不喜欢二次元呢（笑）。</br></br>
+      is the creator of this website. I am the experiencer and survivor of the maple leaf 615 incident. After that, I established the Maple (Rabbit) Leaf (Horn) Trisolarans (Alliance) Organization (abbreviated as MTO) on June 15, 2021, and became the spiritual leader of the MTO. </br>Now I live in the eternal Pavilion in the Gensokyo, working part-time as a self machine and a pharmacist (bushi). At the same time, I am also a big fan of The ThreeBody, Tohou Project, ChuangJia, and Vocaloid. Believe it or not, I don't like the ACGN (laughter). </br></br></h2></font>
+    </div>
+    <style>
+      .text{
+          width: auto;
+          height: auto;
+          position: auto;
+          left: auto;
+          margin-left: auto;
+          background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #39c5bb 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+          -webkit-text-fill-color: transparent;/* 将字体设置成透明色 */
+          -webkit-background-clip: text;/* 裁剪背景图，使文字作为裁剪区域向外裁剪 */
+          -webkit-background-size: 200% 100%; 
+          -webkit-animation: masked-animation 4s linear infinite;
+          font-size: 22px;
+      }
+      @keyframes masked-animation {
+          0% {
+              background-position: 0  0;
+          }
+          100% {
+              background-position: -100%  0;
+          }
+      }
+    </style>
+
+    <style>
+      .text2{
+          width: auto;
+          height: auto;
+          position: auto;
+          left: auto;
+          margin-left: auto;
+          background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #39c5bb 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+          -webkit-text-fill-color: transparent;/* 将字体设置成透明色 */
+          -webkit-background-clip: text;/* 裁剪背景图，使文字作为裁剪区域向外裁剪 */
+          -webkit-background-size: 200% 100%; 
+          -webkit-animation: masked-animation 4s linear infinite;
+          font-size: 17px;
+      }
+      @keyframes masked-animation {
+          0% {
+              background-position: 0  0;
+          }
+          100% {
+              background-position: -100%  0;
+          }
+      }
+    </style>
+
+    <style>
+      .text3{
+          width: auto;
+          height: auto;
+          position: auto;
+          left: auto;
+          margin-left: auto;
+          background-image: -webkit-linear-gradient(left,blue,#66ffff 10%,#cc00ff 20%,#CC00CC 30%, #CCCCFF 40%, #39c5bb 50%,#CCCCFF 60%,#CC00CC 70%,#CC00FF 80%,#66FFFF 90%,blue 100%);
+          -webkit-text-fill-color: transparent;/* 将字体设置成透明色 */
+          -webkit-background-clip: text;/* 裁剪背景图，使文字作为裁剪区域向外裁剪 */
+          -webkit-background-size: 200% 100%; 
+          -webkit-animation: masked-animation 4s linear infinite;
+          font-size: 15px;
+      }
+      @keyframes masked-animation {
+          0% {
+              background-position: 0  0;
+          }
+          100% {
+              background-position: -100%  0;
+          }
+      }
+    </style>
+  </body>
+
+  <script src="src/L2Dwidget.min.js"></script>
+  <script type="text/javascript">
+  var selectAry = [
+      ["chitose"],
+      ["epsilon2.1", "epsilon2_1"],
+      ["gantzert_felixander", "gf"],
+      ["haru01"],
+      ["haru02"],
+      ["haruto"],
+      ["hibiki"],
+      ["hijiki"],
+      ["izumi"],
+      ["koharu"],
+      ["miku"],
+      ["nico"],
+      ["ni-j"],
+      ["nipsilon"],
+      ["nito"],
+      ["shizuku"],
+      ["tororo"],
+      ["tsumiki"],
+      ["Unitychan"],
+      ["wanko"],
+      ["z16"]
+  ];
+
+  selectAry.map((ary) => {
+      $(".dropdown-menu").append('<li class="selectClick">' + ary[0] + '</li>');
+  });
+
+  $(".selectClick").click(function(e) {
+      window.location.href = `${window.location.origin}${window.location.pathname}?id=${$(this).text().toLowerCase()}`;
+  })
+
+  function initL2Dwidget(selectId) {
+      let modalName = selectAry.find((item) => { return item[0].toLowerCase() == selectId });
+      console.log('modalName', modalName)
+      modalName = modalName && modalName[1] ? modalName[1] : selectId
+
+
+      L2Dwidget
+          .on('*', (name) => {
+             // console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+          })
+          .init({
+              dialog: {
+                  // 开启对话框
+                  enable: true,
+                  script: {
+                      // 当触摸到角色身体
+                      'tap body': '哎呀！别碰我！',
+                      // 当触摸到角色头部
+                      'tap face': '人家是在认真写博客哦--前端妹子',
+                  }
+              },
+              display: {
+                  position: 'right'
+              },
+              "model": { "jsonPath": "packages/live2d-widget-model-" + modalName + "/assets/" + selectId + ".model.json" },
+              "mobile": { "show": true, scale: 0.5 },
+          });
+  }
+
+  function getUrlQuery(name, url) {
+      if (!url) {
+          url = window.location.href;
+      }
+      name = name.replace(/[\[\]]/g, "\\$&");
+      let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  let tId = getUrlQuery('id') || 'miku';
+  $('.btn-info').text(tId);
+  initL2Dwidget(tId);
+
+
+  // L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});
+  </script>
+
+  <footer>
+
+    <div align="center">
+      <a href='contents-c.html'><img src="assets/Image/img_01.jpeg" height="400" width="600"></a>
+    </div>
+    
+    <div align="center">
+      <font color="#39c5bb"><h3></br>本站访问量<span id="busuanzi_value_site_pv"></span>次</h3></font>
+    </div>
+      
+    <!--不蒜子-->
+    <!--<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>-->
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  </footer>
+
+</html>
